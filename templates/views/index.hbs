@@ -1,0 +1,300 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+
+    <script src="Javascript/Program.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav">
+                <a href="#box" class="logo">Bookings.</a>
+                <a href="#sections" class="Properties" onclick="currentSlide(1)">Properties</a>
+                <a href="#admin" class="Properties">Management</a>
+                <div class=" nav-right">
+                    <a href="#login">LOGIN</a>
+                    <a href="#signup">SIGN UP</a>
+                </div>
+            </div>
+        </nav>
+        <div class="box" id="box">
+            <div class="LineFull">
+                <h1>FIND YOUR NEXT BUSINESS<br> PROPERTY RENTAL</h1>
+                <div class="Littlebar"></div><br>
+                <button>BOOK NOW</button>
+                <div class="LittlePic">
+                </div>
+            </div>
+
+        </div>
+        <div class="text">
+            <p>
+                Give us your information property rental give us your information property rental
+            </p>
+        </div>
+        <div class="BigPic">
+
+        </div>
+    </header>
+
+    <section class="Section" id="sections">
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span><br>
+            <span class="dot" onclick="currentSlide(2)"></span><br>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="SectionI sections">
+            <figure class="Figs"></figure>
+            <figure class="Figs"></figure>
+            <figure class="Figs"></figure>
+            <form name="form" onsubmit="validateForm()" method="POST" action="/reservation">
+                <div class="ReservationDetails">
+                    <h1>Give Us Your Informations</h1>
+                    <div class="Reservation">
+                        <!-- username -->
+                        <div>
+                            <label>Full Name:</label> <span class="spans" id="FullName"></span><br><input type="text"
+                                name="fname">
+                            <br>
+                            <label>Check-in:</label> <span class="spans" id="Checkin"></span><br><input type="date"
+                                id="" name="CheckIn">
+                            <br>
+                            <label>No Members:</label> <span class="spans" id="NoMembers"></span><br><input type="text"
+                                id="" name="NoMembers">
+                            <br>
+                        </div>
+                        <div>
+                            <label>Birthday:</label> <span class="spans" id="Birthday"></span><br><input type="date"
+                                id="" name="Birthday">
+                            <br>
+                            <label>Check-out:</label> <span class="spans" id="Checkout"></span><br><input type="date"
+                                id="" name="Checkout">
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                    <button onclick="Show(1)" type="submit" class="BookNow" id="btn_Invoice">BOOK
+                        NOW</button>
+
+                    <!-- Modal Form -->
+                </div>
+            </form>
+
+            <div class="Profile">
+                <span class="ProfileIMG IMG1"></span>
+                <p class="name">Owner</p><br>
+                <p>High tech meeting space fully equiped </p>
+                <p class="Location">Kaouki</p>
+                <div class="bars">
+                    <span class="bar" onclick="currentSlideI(1)"></span>
+                    <span class="bar" onclick="currentSlideI(2)"></span>
+                    <span class="bar" onclick="currentSlideI(3)"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+    <section id="signup" class="Section signup">
+        <div id="popUp">
+            <p id="InfoPopUp"></p>
+            <span onclick="hide()">X</span>
+        </div>
+        <h1 align="center"><span>Boo</span>king.</h1>
+
+        <div class="SIGNUP_Page">
+
+            <label>©booking.</label>
+        </div>
+        <div class="SIGNUPForm">
+            <form method="POST" action="/User" name="form_signup">
+                <h1>Create Your Account</h1>
+                <label>Email</label><br><input type="text" name="userName">
+                <br> <span class="sSignUp" id="userName"></span><br>
+
+                <label>Password</label><br><input type="password" name="Password">
+                <br> <span class="sSignUp" id="Password"></span><br>
+
+                <label>Confirm Password</label> <span class="sSignUp" id="CPasswrd"></span>
+                <br><input type="password" name="CPasswrd">
+                <br> <br>
+                <button type="submit" class="BookNow">BOOK NOW</button>
+            </form>
+        </div>
+
+    </section>
+
+
+    <section id="login" class="Section signup">
+
+        <h1 align="center"><span>Boo</span>king.</h1>
+
+        <div class="SIGNUP_Page">
+
+            <label>©booking.</label>
+        </div>
+        <div class="SIGNUPForm">
+            <form name="form_signup">
+                <h1>Login To Your Account</h1>
+                <label>Email</label><br><input type="text" name="userName">
+                <br> <span class="sSignUp" id="userLOGIN"></span><br>
+                <label>Password</label><br><input type="password" name="Password">
+                <br> <span class="sSignUp" id="PasswordLOGIN"></span><br>
+
+                <br> <br>
+                <button type="button" onclick="SignUP()" class="BookNow">BOOK NOW</button>
+            </form>
+        </div>
+
+    </section>
+
+    <section id="admin" class="Section signup">
+
+        <h1 align="center"><span>Boo</span>king.</h1>
+
+        <div class="SIGNUP_Page">
+
+            <label>©booking.</label>
+        </div>
+        <div class="SIGNUPForm">
+            <form name="_admin" class="_admin" id="_form" method="POST">
+                <h1>Edit your reservation</h1>
+                <label>ID</label><br>
+                <select onchange="SelectedIndex()" id="id" name="id">
+                    {{#each datas}}
+                    <option>{{this.id}}</option>
+                    {{/each}}
+                </select>
+                <br> <br>
+                <label>full name</label><br>
+                <input type="text" id="fname" name="fname">
+
+                <br>
+                <br>
+
+                <label>CheckIn</label><br>
+                <input type="date" id="CheckIn" name="CheckIn">
+                <br>
+                <br>
+
+                <label>Checkout</label><br>
+                <input type="date" id="CheckOut" name="CheckOut">
+                <br>
+                <br>
+
+                <label>Birth</label><br>
+                <input type="date" id="Birth" name="Birthday">
+
+                <br>
+                <br>
+                <label>No Members</label><br>
+                <input type="text" id="No_Members" name="NoMembers">
+
+
+                <br> <br>
+
+                <input type="submit" value="supprimer" class="btn_Del">
+                <input type="submit" value="Modifier" class="btn_Alter">
+            </form>
+        </div>
+
+    </section>
+
+
+
+    <!-- The Modal -->
+    <div id="ModalForm" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <section>
+                <figure id="PropertyIMG"></figure>
+                <label>Welcome<b id=""> </b></label>
+                <label>And <i id="NoMmbr"></i> Others</label>
+                <br><br><br><br>
+                <label>From:<i id="chackin"></i> </label>
+                <label>To: <i id="chackout"></i>>/label>
+            </section>
+        </div>
+
+    </div>
+
+
+    <script>
+        var request = new XMLHttpRequest();
+        var data_produit = "";
+        var url = "http://localhost:3000/DATA/reservation.json";
+
+        function LoadDropMenu(data) {
+            id = document.getElementById("id").value;
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].id == id) {
+                    document.getElementById("fname").value = data[i].fname;
+                    document.getElementById("CheckIn").value = data[i].CheckIn;
+                    document.getElementById("CheckOut").value = data[i].Checkout;
+                    document.getElementById("Birth").value = data[i].Birthday;
+                    document.getElementById("No_Members").value = data[i].NoMembers;
+                    break;
+                }
+
+            }
+        }
+
+
+
+
+        function SelectedIndex() {
+            request.open("GET", url);
+            request.onload = function () {
+
+                if (request.status == 200) {
+
+                    data_produit = JSON.parse(request.responseText);
+                    LoadDropMenu(data_produit);
+                }
+            };
+            request.send(null);
+        }
+
+
+
+
+        /*** Button supprimer***/
+        var btn_Del = document.getElementsByClassName('btn_Del');
+        var form = document.getElementById('_form');
+
+        btn_Del[0].addEventListener('click', (e) => {
+            form.setAttribute('action', '/DeleteReservation');
+            alert("Deleted - Please Reload the server - All changes applied to DATA/reservation.json")
+
+        })
+        /********************/
+
+        /*** Button Modification***/
+        var btn_Alter = document.getElementsByClassName('btn_Alter');
+        var form = document.getElementById('_form');
+
+        btn_Alter[0].addEventListener('click', (e) => {
+            form.setAttribute('action', '/AlterReservation');
+            alert("Modified - Please Reload the server - All changes applied to DATA/reservation.json")
+        })
+            /********************/
+
+
+    </script>
+</body>
+
+</html>

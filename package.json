@@ -1,0 +1,28 @@
+{
+  "name": "Location",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citizen0x/Location.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/citizen0x/Location/issues"
+  },
+  "homepage": "https://github.com/citizen0x/Location#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "hbs": "^4.1.0",
+    "jinja-js": "^0.1.8",
+    "joi": "^14.3.1"
+  }
+}

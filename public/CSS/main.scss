@@ -1,0 +1,582 @@
+//Global
+$colors: (
+  primary: #68abb9,
+  secondary: #b07b5b,
+);
+button {
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 250px;
+  color: white;
+}
+h1 {
+  color: white;
+  // font-size: 200%;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+//Body
+body {
+  // background-color: map-get($map: $colors, $key:primary );
+  font-family: "comfortaa", sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  //Header
+  header {
+    height: 100%;
+  }
+}
+input {
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 250px;
+  margin-top: -12px;
+  padding-left: 15px;
+}
+label {
+  color: white;
+  margin-left: 5px;
+}
+span {
+  color: red;
+}
+header {
+  .box {
+    background-color: map-get(
+      $map: (
+        $colors,
+      ),
+      $key: primary
+    );
+    height: 70%;
+    width: 60%;
+    position: absolute;
+    top: 0;
+
+    .Littlebar {
+      background-color: white;
+      width: 50px;
+      height: 2px;
+      margin-left: 10%;
+      margin-bottom: auto;
+    }
+    .LittlePic {
+      background-image: url("Images/LittlePic_header1.jpg");
+      background-size: 100%;
+      width: 270px;
+      height: 350px;
+      float: right;
+      margin-right: -15%;
+      margin-top: -17%;
+      // margin-bottom: 10%;
+    }
+    button {
+      margin-left: 10%;
+      background-color: map-get(
+        $map: (
+          $colors,
+        ),
+        $key: secondary
+      );
+    }
+    h1 {
+      margin-top: 200px;
+      margin-left: 10%;
+      // font-size: 200%;
+    }
+  }
+  .BigPic {
+    background-image: url("Images/Bigpic_header2.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 450px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    // float: right;
+    // margin-bottom: 10%;
+  }
+  .text {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    height: 30%;
+    width: 50%;
+
+    p {
+      // vertical-align: middle;
+      padding-top: 80px;
+      padding-left: 10%;
+      width: 75%;
+      position: relative;
+      font-size: 1.5vw;
+    }
+  }
+
+  .LineFull {
+    width: 100%;
+    height: 50vh;
+  }
+}
+// Nav Bar
+nav {
+  z-index: 1;
+  width: 100%;
+
+  position: fixed;
+}
+.nav {
+  overflow: hidden;
+  background-color: transparent;
+  padding: 20px 10px;
+  z-index: 1 !important;
+  position: relative;
+  a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  }
+  .nav-right {
+    float: right;
+  }
+  .Properties {
+    color: white;
+  }
+}
+// Sections
+.Section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  // vertical-align: middle ;
+  .dots {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    z-index: 1;
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: block;
+    }
+    /* Add a background color to the active dot/circle */
+    .active,
+    .dot:hover {
+      background-color: white;
+    }
+  }
+
+  .sections {
+    // background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    button {
+      background-color: map-get(
+        $map: (
+          $colors,
+        ),
+        $key: primary
+      );
+      position: relative;
+      left: 0;
+    }
+    figure {
+      // animation: imageAnimation 30s linear infinite 0s;
+      // backface-visibility: hidden;
+      background-size: cover;
+      background-position: center center;
+      color: transparent;
+      height: 100%;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      // z-index: 0;
+      margin: 0;
+      display: none;
+    }
+    .ReservationDetails {
+      margin-top: 20%;
+      margin-left: 10%;
+      z-index: 10;
+    }
+
+    .Profile {
+      width: 500px;
+      color: white;
+      position: absolute;
+      bottom: 100px;
+      right: 45px;
+
+      .ProfileIMG {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        float: left;
+      }
+      .IMG1 {
+        background-image: url("Images/Profile1.jpg");
+        background-size: 100%;
+      }
+      .IMG2 {
+        background-image: url("Images/Profile2.jpg");
+        background-size: 100%;
+      }
+      .IMG3 {
+        background-image: url("Images/Profile3.jpg");
+        background-size: 100%;
+      }
+      p {
+        z-index: 1;
+      }
+      .name {
+        padding-left: 70px;
+      }
+      .Location {
+        color: map-get(
+          $map: (
+            $colors,
+          ),
+          $key: primary
+        );
+      }
+      .bars {
+        height: 4px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        .bar {
+          width: 33.33%;
+          height: 100%;
+          background-color: white;
+          display: block;
+          cursor: pointer;
+          float: left;
+        }
+        .activeBar,
+        .Bar:hover {
+          background-color: gray;
+        }
+      }
+    }
+    .Reservation {
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        flex-direction: column;
+        line-height: 50px;
+        margin-right: 20px;
+      }
+      .Toggle {
+        display: none;
+        z-index: 1;
+        .spans {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+.Reservation {
+  z-index: 10;
+}
+.ReservationDetails {
+  z-index: 10;
+}
+
+.SectionI {
+  background-image: url("Images/BuildingA1.jpg");
+  background-size: cover;
+}
+.SectionII {
+  background-image: url("Images/BuildingA2.jpg");
+  background-size: cover;
+}
+.SectionIII {
+  background-image: url("Images/BuildingA3.jpg");
+  background-size: cover;
+}
+// Section I
+.SectionI > figure:nth-child(1) {
+  background-image: url("Images/DeskSpace1.jpg");
+}
+.SectionI > figure:nth-child(2) {
+  background-image: url("Images/Space3.jpg");
+}
+
+.SectionI > figure:nth-child(3) {
+  background-image: url("Images/Space4.jpg");
+}
+
+#signup {
+  position: relative;
+  top: -68px;
+  h1 {
+    color: black;
+    font-size: 500%;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    top: 10%;
+    left: 15px;
+  }
+  span {
+    color: white;
+  }
+  #popUp {
+    display: none;
+    background-color: red;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    color: white;
+    text-align: center;
+    p {
+      justify-content: center;
+    }
+    span {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  #SIGNUP_Page {
+    width: 50%;
+    height: 100%;
+    background-image: url("Images/Building.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    float: left;
+    label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 20px;
+    }
+  }
+  #SIGNUPForm {
+    width: 50%;
+    height: 100%;
+    float: right;
+    position: relative;
+    top: -165px;
+  }
+  form {
+    position: relative;
+    top: 35%;
+    left: 20%;
+
+    h1 {
+      font-size: 200%;
+      margin-left: 10%;
+    }
+    span {
+      color: red;
+    }
+    .barLine {
+      background-color: black;
+      width: 60%;
+      height: 1px;
+    }
+    input {
+      width: 60%;
+      height: 55px;
+      margin-top: 10px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+    }
+    label {
+      // font-size: ;
+      color: black;
+    }
+    button {
+      width: 60%;
+      height: 55px;
+      background-color: map-get(
+        $map: (
+          $colors,
+        ),
+        $key: secondary
+      );
+    }
+  }
+}
+
+// Responsive
+@media only screen and (max-width: 1088px) {
+  header .BigPic {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-size: 100%;
+    height: 40%;
+  }
+  .LittlePic {
+    position: absolute;
+    right: 0;
+  }
+  .box {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    .BigPic {
+      height: 30%;
+      background-size: 100%;
+    }
+    .LittlePic {
+      position: relative;
+      right: -10px;
+      top: 50px;
+      width: 100px;
+      height: 25%;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 500px) {
+  .nav-right a {
+    font-size: 12px;
+  }
+
+  header {
+    .box {
+      width: 100%;
+    }
+    .LittlePic {
+      position: relative;
+      left: -100px;
+      top: 190px;
+      width: 200px !important;
+      background-repeat: no-repeat;
+    }
+    button {
+      width: 200px !important;
+    }
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .ReservationDetails {
+    figure {
+      background-size: stre;
+    }
+    .Reservation {
+      .Toggle {
+        width: 95%;
+      }
+      input {
+        width: 95%;
+      }
+    }
+    button {
+      width: 95%;
+    }
+  }
+  .Profile {
+    margin-bottom: -17%;
+    margin-right: -11%;
+  }
+
+  #signup {
+    #SIGNUP_Page {
+      width: 100%;
+    }
+    #SIGNUPForm {
+      position: static;
+
+      form {
+        position: absolute;
+        left: 5%;
+        width: 100%;
+        h1 {
+          color: white;
+        }
+      }
+      input {
+        width: 90%;
+      }
+      button {
+        width: 90%;
+      }
+    }
+  }
+}
+
+#ModalForm {
+  text-align: center;
+  label {
+    font-size: 30px;
+    color: black;
+  }
+  #PropertyIMG {
+    width: 85%;
+    height: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: 100%;
+  }
+}
+
+//ModalForm
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+

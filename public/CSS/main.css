@@ -1,0 +1,604 @@
+button {
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 250px;
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+body {
+  font-family: "comfortaa",sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body header {
+  height: 100%;
+}
+
+input {
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 250px;
+  margin-top: -12px;
+  padding-left: 15px;
+}
+
+label {
+  color: white;
+  margin-left: 5px;
+}
+
+span {
+  color: red;
+}
+
+header .box {
+  background-color: #68ABB9;
+  height: 70%;
+  width: 60%;
+  position: absolute;
+  top: 0;
+}
+
+header .box .Littlebar {
+  background-color: white;
+  width: 50px;
+  height: 2px;
+  margin-left: 10%;
+  margin-bottom: auto;
+}
+
+header .box .LittlePic {
+  background-image: url("Images/LittlePic_header1.jpg");
+  background-size: 100%;
+  width: 270px;
+  height: 350px;
+  float: right;
+  margin-right: -15%;
+  margin-top: -17%;
+}
+
+header .box button {
+  margin-left: 10%;
+  background-color: #B07B5B;
+}
+
+header .box h1 {
+  margin-top: 200px;
+  margin-left: 10%;
+}
+
+header .BigPic {
+  background-image: url("Images/Bigpic_header2.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 450px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header .text {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  height: 30%;
+  width: 50%;
+}
+
+header .text p {
+  padding-top: 80px;
+  padding-left: 10%;
+  width: 75%;
+  position: relative;
+  font-size: 1.5vw;
+}
+
+header .LineFull {
+  width: 100%;
+  height: 50vh;
+}
+
+nav {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: transparent;
+  padding: 20px 10px;
+  z-index: 1 !important;
+  position: relative;
+}
+
+.nav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.nav a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav .nav-right {
+  float: right;
+}
+
+.nav .Properties {
+  color: white;
+}
+
+.Section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.Section .dots {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  z-index: 1;
+  /* Add a background color to the active dot/circle */
+}
+
+.Section .dots .dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: block;
+}
+
+.Section .dots .active, .Section .dots .dot:hover {
+  background-color: white;
+}
+
+.Section .sections {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.Section .sections button {
+  background-color: #68ABB9;
+  position: relative;
+  left: 0;
+}
+
+.Section .sections figure {
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  margin: 0;
+  display: none;
+}
+
+.Section .sections .ReservationDetails {
+  margin-top: 20%;
+  margin-left: 10%;
+  z-index: 10;
+}
+
+.Section .sections .Profile {
+  width: 500px;
+  color: white;
+  position: absolute;
+  bottom: 100px;
+  right: 45px;
+}
+
+.Section .sections .Profile .ProfileIMG {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  float: left;
+}
+
+.Section .sections .Profile .IMG1 {
+  background-image: url("Images/Profile1.jpg");
+  background-size: 100%;
+}
+
+.Section .sections .Profile .IMG2 {
+  background-image: url("Images/Profile2.jpg");
+  background-size: 100%;
+}
+
+.Section .sections .Profile .IMG3 {
+  background-image: url("Images/Profile3.jpg");
+  background-size: 100%;
+}
+
+.Section .sections .Profile p {
+  z-index: 1;
+}
+
+.Section .sections .Profile .name {
+  padding-left: 70px;
+}
+
+.Section .sections .Profile .Location {
+  color: #68ABB9;
+}
+
+.Section .sections .Profile .bars {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  display: block;
+}
+
+.Section .sections .Profile .bars .bar {
+  width: 33.33%;
+  height: 100%;
+  background-color: white;
+  display: block;
+  cursor: pointer;
+  float: left;
+}
+
+.Section .sections .Profile .bars .activeBar, .Section .sections .Profile .bars .Bar:hover {
+  background-color: gray;
+}
+
+.Section .sections .Reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Section .sections .Reservation div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 50px;
+  margin-right: 20px;
+}
+
+.Section .sections .Reservation .Toggle {
+  display: none;
+  z-index: 1;
+}
+
+.Section .sections .Reservation .Toggle .spans {
+  font-size: 10px;
+}
+
+.Reservation {
+  z-index: 10;
+}
+
+.ReservationDetails {
+  z-index: 10;
+}
+
+.SectionI {
+  background-image: url("Images/BuildingA1.jpg");
+  background-size: cover;
+}
+
+.SectionII {
+  background-image: url("Images/BuildingA2.jpg");
+  background-size: cover;
+}
+
+.SectionIII {
+  background-image: url("Images/BuildingA3.jpg");
+  background-size: cover;
+}
+
+.SectionI > figure:nth-child(1) {
+  background-image: url("Images/DeskSpace1.jpg");
+}
+
+.SectionI > figure:nth-child(2) {
+  background-image: url("Images/Space3.jpg");
+}
+
+.SectionI > figure:nth-child(3) {
+  background-image: url("Images/Space4.jpg");
+}
+
+.signup {
+  position: relative;
+  top: -68px;
+}
+
+.signup h1 {
+  color: black;
+  font-size: 500%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  position: relative;
+  top: 10%;
+  left: 15px;
+}
+
+.signup span {
+  color: white;
+}
+
+.signup #popUp {
+  display: none;
+  background-color: red;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  color: white;
+  text-align: center;
+}
+
+.signup #popUp p {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signup #popUp span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+
+.signup .SIGNUP_Page {
+  width: 50%;
+  height: 100%;
+  background-image: url("Images/Building.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  float: left;
+}
+
+.signup .SIGNUP_Page label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+
+.signup .SIGNUPForm {
+  width: 50%;
+  height: 100%;
+  float: right;
+  position: relative;
+  top: -165px;
+}
+
+.signup ._admin {
+  position: relative;
+  top: 10%;
+
+  left: 20%;
+}
+
+.signup form {
+  position: relative;
+  top: 35%;
+  
+  left: 20%;
+}
+
+
+
+.signup form h1 {
+  font-size: 200%;
+  margin-left: 10%;
+}
+
+.signup form span {
+  color: red;
+}
+
+.signup form .barLine {
+  background-color: black;
+  width: 60%;
+  height: 1px;
+}
+
+.signup form input {
+  width: 60%;
+  height: 55px;
+  margin-top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.signup form select {
+  width: 60%;
+  height: 55px;
+  margin-top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+}
+.signup form label {
+  color: black;
+}
+
+.signup form button {
+  width: 60%;
+  height: 55px;
+  background-color: #B07B5B;
+}
+
+@media only screen and (max-width: 1088px) {
+  header .BigPic {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-size: 100%;
+    height: 40%;
+  }
+  .LittlePic {
+    position: absolute;
+    right: 0;
+  }
+  .box {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  header .BigPic {
+    height: 30%;
+    background-size: 100%;
+  }
+  header .LittlePic {
+    position: relative;
+    right: -10px;
+    top: 50px;
+    width: 100px;
+    height: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-right a {
+    font-size: 12px;
+  }
+  header .box {
+    width: 100%;
+  }
+  header .LittlePic {
+    position: relative;
+    left: -100px;
+    top: 190px;
+    width: 200px !important;
+    background-repeat: no-repeat;
+  }
+  header button {
+    width: 200px !important;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  .ReservationDetails figure {
+    background-size: stre;
+  }
+  .ReservationDetails .Reservation .Toggle {
+    width: 95%;
+  }
+  .ReservationDetails .Reservation input {
+    width: 95%;
+  }
+  .ReservationDetails button {
+    width: 95%;
+  }
+  .Profile {
+    margin-bottom: -17%;
+    margin-right: -11%;
+  }
+  .signup .SIGNUP_Page {
+    width: 100%;
+  }
+  .signup .SIGNUPForm {
+    position: static;
+  }
+  .signup .SIGNUPForm form {
+    position: absolute;
+    left: 5%;
+    width: 100%;
+  }
+  .signup .SIGNUPForm form h1 {
+    color: white;
+  }
+  .signup .SIGNUPForm input {
+    width: 90%;
+  }
+  .signup .SIGNUPForm button {
+    width: 90%;
+  }
+}
+
+#ModalForm {
+  text-align: center;
+}
+
+#ModalForm label {
+  font-size: 30px;
+  color: black;
+}
+
+#ModalForm #PropertyIMG {
+  width: 85%;
+  height: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
