@@ -5,4 +5,4 @@ https://www.behance.net/gallery/97791417/BookingSite-Brief-Project
 ** What I learnt **
 - to Create a full CRUD with Web Application with NodeJS
 - to manage JSON Data
-- Apply the UI Design from Adobe XD to Sass Code
+- Apply the UI Design from Adobe XD to Sass/html
